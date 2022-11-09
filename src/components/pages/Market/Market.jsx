@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Market.module.css";
-import Car from "../../objects/Car/Car";
+import Car from "../../objects/Car/OldCar/Car";
 import carList from "../../../data/carList.js";
 
 export default function Market() {
