@@ -10,13 +10,8 @@ export default function Car({
   condition,
   mileage,
   text,
-  setArr,
-  arr,
+  func,
 }) {
-  function deleteArr(id) {
-    setArr(arr.filter((el) => el.id !== id));
-  }
-
   return (
     <div className={style.car}>
       <h2>Название: {carName}</h2>
@@ -27,7 +22,7 @@ export default function Car({
       <span>Цена: {carPrice} ₽</span>
       <span>Состояние: {condition}</span>
       <span>Пробег: {mileage} км</span>
-      <button onClick={() => deleteArr(id)}>{text}</button>
+      <button onClick={() => func(id)}>{text}</button>
     </div>
   );
 }

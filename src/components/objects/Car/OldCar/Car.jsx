@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./Car.module.css";
-import newArrCarList from "../../../../data/newArrCarList";
 
 export default function Car({
   id,
@@ -10,14 +9,11 @@ export default function Car({
   carPrice,
   condition,
   mileage,
-  add,
   text,
+  func,
+  arr,
+  item,
 }) {
-  function transfer(arr) {
-    newArrCarList.push(arr);
-    return newArrCarList;
-  }
-
   return (
     <>
       <div className={style.car}>
@@ -28,7 +24,7 @@ export default function Car({
         <span>Цена: {carPrice} ₽</span>
         <span>Состояние: {condition}</span>
         <span>Пробег: {mileage} км</span>
-        <button onClick={() => transfer(add)}> {text} </button>
+        <button onClick={() => func(arr, item)}>{text}</button>
       </div>
     </>
   );
